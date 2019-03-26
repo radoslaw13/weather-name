@@ -1,0 +1,356 @@
+.App {
+  text-align: center;
+  background-image: url("../Images/bg.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+/*--------------Logo style-----------*/
+.logo-container {
+  margin: 2vh 0 2vh 10vw;
+  display: flex;
+}
+
+.logo {
+  display: flex;
+  cursor: pointer;
+}
+
+.logo-image {
+  width: 10vw;
+  height: 10vw;
+  display: inline-block;
+}
+
+.app-title {
+  font-size: 3vw;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.title-container {
+  text-align: left;
+}
+
+.app-subtitle {
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.5vw;
+  margin: 0;
+}
+
+/*--------------Search style----------*/
+
+.search-bar-container {
+  background-color: #ebeced;
+  padding: 20px;
+  display: inline-block;
+  width: 80vw;
+}
+
+.search-input {
+  font-family: -apple-system, BlinkMacSystemFont, " Cabin", sans-serif,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  border: none;
+  width: 40%;
+  transition: width 0.8s ease;
+}
+
+.search-input:focus {
+  width: 50%;
+  outline: none;
+}
+
+.search-button-container {
+  display: inline-block;
+  position: absolute;
+}
+
+.search-button {
+  background: #ffc20f;
+  border: none;
+  outline: none;
+  margin-left: 5px;
+  min-height: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, " Cabin", sans-serif,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 800;
+}
+
+.search-button:hover {
+  background: #e0aa0a;
+  cursor: pointer;
+}
+
+/*--------------Current Weather Style----------*/
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #ffc20f; /* Blue */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  display: none;
+  margin: 30px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.weather-container {
+  max-width: 1200px;
+  width: 70%;
+  display: inline-block;
+  background: #ebeced;
+  animation: show-opacity 2s;
+  transition: 2s ease;
+}
+
+@keyframes show-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.city-name {
+  margin: 15px 0 5px 30px;
+}
+
+.city-name-wrapper {
+  text-align: left;
+}
+
+.country-name {
+  margin: 5px 0 10px 30px;
+}
+
+.country-name-wrapper {
+  text-align: left;
+}
+
+.temperature {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #a7870c;
+}
+
+.weather-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.weather-info,
+.weather-icon {
+  display: inline-block;
+}
+
+.icon {
+  height: 80px;
+}
+
+.date {
+  margin-top: 20px;
+  font-size: 1vw;
+  font-weight: 700;
+}
+
+/*--------------Forecast change Style----------*/
+
+.menu-container {
+  max-width: 1200px;
+  width: 70%;
+  display: none;
+  animation: show-opacity 2s;
+  transition: 2s ease;
+}
+
+.forecast-button {
+  display: inline-block;
+  width: calc(33.33333333% - 3px);
+  margin: 0 3px 0 0;
+  height: 100%;
+  background-color: #babdbf;
+  cursor: pointer;
+}
+
+.forecast-button > p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forecast-changer {
+  margin: 10px 0 0 0;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.active {
+  background-color: #ebeced;
+  border-radius: 7px 7px 0 0;
+}
+
+/*--------------HourlyWeather change Style----------*/
+
+.one-forecast-wrapper {
+  border: 1px solid black;
+  border-radius: 5px;
+  flex: 1 1 12%;
+  margin: 0.8vw;
+  padding: 0.6vw;
+  max-width: 12%;
+}
+
+.forecast-wrapper {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.temperature-wrapper {
+  font-size: 1.8vw;
+  font-weight: 800;
+  color: #a7870c;
+  margin: 10px 0 10px 0;
+}
+
+.hour-wrapper,
+.icon-phrase {
+  font-weight: 700;
+  font-size: 1vw;
+}
+
+.date-wrapper {
+  font-size: 1vw;
+  font-weight: 700;
+}
+
+/*--------------DailyWeather change Style----------*/
+
+.one-day-wrapper {
+  border: 1px solid black;
+  border-radius: 5px;
+  flex: 1 1 12%;
+  margin: 0.8vw;
+  padding: 1.1vw;
+  max-width: 12%;
+}
+
+/*--------------Clock Style----------*/
+
+.clock-container {
+  display: flex;
+  margin-left: 30vw;
+}
+
+.clock {
+  font-size: 2vw;
+  font-weight: 600;
+  align-items: center;
+  display: inherit;
+}
+
+.clock-time {
+  margin: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .one-day-wrapper {
+    max-width: 40%;
+    flex: 1 1 40%;
+  }
+
+  .date-wrapper {
+    font-size: 7vw;
+  }
+
+  .search-input {
+    width: 80%;
+    text-align: center;
+    font-size: 7vw;
+  }
+  .search-button {
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 0;
+    font-weight: 700;
+    font-size: 5vw;
+  }
+
+  .search-button-container {
+    display: block;
+    position: static;
+  }
+
+  .weather-container {
+    width: 90%;
+  }
+
+  .logo-container {
+    display: inline-block;
+    margin: 2vh 0;
+  }
+
+  .app-title {
+    font-size: 8vw;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .app-subtitle {
+    text-align: left;
+    font-weight: 600;
+    font-size: 3.5vw;
+    margin: 0;
+  }
+
+  .logo-image {
+    width: 14vw;
+    height: 14vw;
+  }
+
+  .one-forecast-wrapper {
+    flex: 1 1 40%;
+    max-width: 40%;
+  }
+
+  .hour-wrapper,
+  .icon-phrase {
+    font-size: 5vw;
+  }
+
+  .temperature-wrapper {
+    font-size: 7vw;
+  }
+
+  .forecast-changer {
+    width: 90%;
+  }
+}
